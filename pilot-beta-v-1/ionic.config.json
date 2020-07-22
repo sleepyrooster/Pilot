@@ -1,0 +1,7 @@
+{
+  "name": "Pilot Beta V1",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

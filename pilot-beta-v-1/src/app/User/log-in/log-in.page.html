@@ -1,0 +1,23 @@
+
+<ion-content padding>
+  
+  <ion-item color='primary'>
+      <img alt='bannerblack' height='auto' src='assets\images\bannerwhite.png'>
+  </ion-item>
+    
+
+<ion-list>
+
+    <ion-label position='floating'>Email</ion-label>
+    <ion-input type='email' [(ngModel)]="email"></ion-input>
+ 
+    <ion-label position='floating'>Password</ion-label>
+    <ion-input type='password' [(ngModel)]="password"></ion-input>
+  
+</ion-list>
+
+<ion-button fill='solid' expand='full' color='primary' (click)='LogIn()'>Log Into Pilot</ion-button>
+<ion-button fill='clear' expand='full' color='secondary' (click)='SignUp()'>Don't have an account? Click here</ion-button>
+<ion-button fill='outline' expand='full' color='secondary' (click)='GoogleLogin()'>Google Apps</ion-button>
+
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-buttons href='tabs/tabs/chats' slot='start'>
+    <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Group Chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-grid>
+        <ion-row *ngFor="let msg of Content">
+          <ion-col *ngIf='!msg.uid' size='9' class="message other-messages">
+            <b>{{ msg.displayName}}</b>
+            <span> {{ msg.Content }} </span>
+            <div class='time' text-right><br>
+              {{ msg.CreatedAt| date:'short'}}
+            </div>
+          </ion-col>
+      
+          <ion-col *ngIf='msg.uid' offset='3' size='9' class="message my-messages">
+            <b>{{ msg.displayName}}</b>
+            <span> {{ msg.Content }} </span>
+            <div class='time' text-right><br>
+              {{ msg.CreatedAt | date:'short'}}
+            </div>
+            </ion-col>
+        </ion-row>
+      </ion-grid> 
+</ion-content>
+
+<ion-footer >
+  <ion-toolbar color='light'>
+    <ion-grid>
+      <ion-row align-items-center no-padding>
+        <ion-col size='10' >
+          <ion-textarea autosize maxRows='3' [(ngModel)]="Message.Content" class="message-input"></ion-textarea>
+        </ion-col>
+        <ion-col size='2'>
+          <ion-button expand='block' fill='clear' color='primary' [disabled]='Message.Content == ""' class='msg-btn' 
+          (click)='sendMessage()'>
+        <ion-icon name='send' slot='icon-only'></ion-icon>
+        </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>  
+  </ion-toolbar>
+</ion-footer>

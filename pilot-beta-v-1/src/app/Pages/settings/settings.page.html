@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-title>
+      <img alt='bannerwhite' height='40' src='assets\images\bannerwhite.png'>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+ <!-- Icons for Setting page -->
+  <ion-list>
+<!-- User Profile -->
+    <ion-item routerLink='/user-profile'>
+      <ion-icon name="people-outline" ></ion-icon>
+      <ion-label>User Settings</ion-label>
+    </ion-item>
+
+    <!-- Color Theme -->
+    <ion-item (click)='changeColor()'>
+      <ion-label>Theme</ion-label>
+    </ion-item>
+
+    <!-- Sign Out Button -->
+    <ion-item (click)='signOut()'>
+      <ion-icon name='log-out-outline'></ion-icon>
+      <ion-label>Log Out</ion-label>
+    </ion-item>
+
+
+  </ion-list>
+</ion-content>

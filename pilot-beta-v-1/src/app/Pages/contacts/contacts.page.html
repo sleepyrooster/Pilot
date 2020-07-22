@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-title>
+        <img alt='bannerwhite' height='40' src='assets\images\bannerwhite.png'>
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar animated></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let item of contacts">
+    <ion-avatar slot='start'>
+    <img src='{{item.photoURL}}'>
+    </ion-avatar>
+      <ion-label>
+        <h2> {{ item.displayName }} </h2>
+        <h3> {{ item.Division }} </h3>
+        <h3> {{ item.Year }} </h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

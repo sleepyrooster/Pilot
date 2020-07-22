@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-title>
+        <img alt='bannerwhite' height='40' src='assets\images\bannerwhite.png'>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-grid>
+    <ion-row class='rows'>
+      <ion-col size='sm'>
+        <ion-item class='item-1' (click)=OpenToAssignments()>
+          <ion-icon name='list-box' size='large'></ion-icon>
+          <ion-label>
+            <h2>Assignment</h2>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size='sm'>
+        <ion-item class='item-2' (click)=OpenToChecklist()>
+          <ion-icon name='attach' size='large'></ion-icon>
+          <ion-label>
+            <h2>Checklist</h2>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

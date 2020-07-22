@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-title>
+      <img alt='bannerwhite' height='40' src='assets\images\bannerwhite.png'>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+  
+   <ion-item routerLink='/global-chats' >
+     <ion-label>
+       <h2>Global Chat-Room</h2>
+     </ion-label>
+   </ion-item>
+
+  </ion-list>
+  
+   <!-- Creating a new group -->
+   <ion-fab vertical='bottom' horizontal='end' slot='fixed'>
+    <ion-fab-button routerLink='/global-chats'>
+      <ion-icon name='add'></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

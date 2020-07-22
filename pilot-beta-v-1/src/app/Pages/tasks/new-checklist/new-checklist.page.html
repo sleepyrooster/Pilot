@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+      <ion-button slot='start' defaultHref='/tabs/tabs/tasks/checklist'>
+        <ion-back-button></ion-back-button>
+      </ion-button>
+    <ion-title>Create A New Checklist</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position='floating'>Checklist Title</ion-label>
+      <ion-input type='text' [(ngModel)]="Task.Title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position='floating'>Checklist Description</ion-label>
+      <ion-input type='text' [(ngModel)]="Task.Description"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position='floating'>Checklist last date</ion-label>
+      <ion-datetime min='2019' display-format='DD/MM/YYYY' [(ngModel)]="Task.LastDate"></ion-datetime>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button expand='block' shape='round' color='primary' (click)='saveTask()'>Add Task</ion-button>
+
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color='primary'>
+    <ion-buttons slot='start' href='/tabs/tabs/settings'></ion-buttons>
+    <ion-title>User Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list *ngFor="let item of Users">
+    <ion-avatar class ='avatar' >
+      <img src='{{ item.photoURL }}'>
+    </ion-avatar>
+    <ion-item *ngIf="item.uid">
+      <ion-label >
+        <h1> {{ item.displayName }} </h1>
+        <h2> {{ item.Division }} </h2>
+        <h2> {{ item.Year }} </h2>
+        <h2> {{ item.email }} </h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button fill='solid' color='primary' expand='block' routerLink='/credential-update'>Update Credentials</ion-button>
+
+</ion-content>
